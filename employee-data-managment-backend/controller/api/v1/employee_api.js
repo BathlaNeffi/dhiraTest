@@ -15,8 +15,8 @@ module.exports.create=async(req,res)=>{
                 data:{
                     employee:{
                         name:req.query.name,
-                        salary:req.query.name,
-                        department:req.query.name
+                        salary:req.query.salary,
+                        department:req.query.department
                     }
                 },
                 message:"Employee Created "
@@ -48,7 +48,7 @@ module.exports.list=async(req,res)=>{
             return {
                 name: employee.name,
                 salary: employee.salary,
-                department: employee.salary
+                department: employee.department
             }
         }
         const formatedEmployee = employees.map(myfunction);
